@@ -1,26 +1,55 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <h1>Dynamic Component Loading - Vue.js</h1>
+    <lazyLoad />
+    <button @click="loginIn">Load Ad</button>
+    <div v-if="showComponent">
+      <loginIn />
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import loginIn from "./components/loginIn.vue";
+import lazyLoad from "./components/lazyLoad.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    loginIn,
+    lazyLoad,
+  },
+  data() {
+    return {
+      showComponent: false,
+    };
+  },
+  methods: {
+    loginIn() {
+      this.showComponent = true;
+    },
+  },
+};
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 30px;
+}
+button {
+  padding: 10px;
+  border-color: black;
+  border-radius: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+* {
+  color: black;
+  font-family: "Times New Roman", Times, serif;
 }
 </style>
