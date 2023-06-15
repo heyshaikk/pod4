@@ -19,7 +19,7 @@
         </div>
         <div class="col-md-8">
           <div class="container" style="background-color: grey">
-            <center><h1 id="content-heading">The Content</h1></center>
+            <h1 id="content-heading">The Content</h1>
             <p id="para">
               When I think about web performance, the first thing that comes to my
             mind is how images are generally the last elements that appear on a
