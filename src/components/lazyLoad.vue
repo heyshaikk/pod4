@@ -111,7 +111,7 @@
         this.imageIds1 = ids1;
   
         while (ids2.length < 2) {
-          const id2 = Math.floor(Math.random() * 1000) + 40;
+          const id2 = Math.floor(crypto.getRandomValues() * 1000) + 40;
           if (!ids2.includes(id2)) {
             ids2.push(id2);
           }
