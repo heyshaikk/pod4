@@ -4,7 +4,7 @@
         <div class="col-md-2">
           <div class="container" style="background-color: red">
             <div class="row">
-              <div class="col">
+              <div class="col"> 
                 <h3>Ad Content</h3>
                 <img
                   id="images"
