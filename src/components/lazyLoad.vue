@@ -103,7 +103,7 @@
         const ids1 = [];
         const ids2 = [];
         while (ids1.length < 2) {
-          const id1 = Math.floor(Math.random() * 1000);
+          const id1 = Math.floor(crypto.getRandomValues()* 1000);
           if (!ids1.includes(id1)) {
             ids1.push(id1);
           }
