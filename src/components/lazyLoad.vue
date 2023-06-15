@@ -5,13 +5,13 @@
           <div class="container" style="background-color: red">
             <div class="row">
               <div class="col">
-                <center><h3>Ad Content</h3></center>
+                <h3>Ad Content</h3>
                 <img
                   id="images"
                   v-for="id1 in imageIds1"
                   :key="id1"
                   :src="`https://picsum.photos/id/${id1}/150/150`"
-                  class="img-fluid"
+                  class="img-fluid" alt="ImageDisplayError"
                 />
               </div>
             </div>
